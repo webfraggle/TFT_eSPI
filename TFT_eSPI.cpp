@@ -4521,7 +4521,7 @@ void TFT_eSPI::drawWedgeLine(float ax, float ay, float bx, float by, float ar, f
       if (!endX) { endX = true; xs = xp; }
       if (alpha > HiAlphaTheshold) {
         // #ifdef GC9A01_DRIVER
-        #if (defined (GC9A01_DRIVER || defined (GC9D01_DRIVER))
+        #if defined (GC9A01_DRIVER || defined (GC9D01_DRIVER)
           drawPixel(xp, yp, fg_color);
         #else
           if (swin) { setWindow(xp, yp, x1, yp); swin = false; }
@@ -4534,7 +4534,7 @@ void TFT_eSPI::drawWedgeLine(float ax, float ay, float bx, float by, float ar, f
         bg = readPixel(xp, yp); swin = true;
       }
       // #ifdef GC9A01_DRIVER
-      #if (defined (GC9A01_DRIVER || defined (GC9D01_DRIVER))
+      #if defined (GC9A01_DRIVER || defined (GC9D01_DRIVER)
         uint16_t pcol = fastBlend((uint8_t)(alpha * PixelAlphaGain), fg_color, bg);
         drawPixel(xp, yp, pcol);
         swin = swin;
@@ -4561,7 +4561,7 @@ void TFT_eSPI::drawWedgeLine(float ax, float ay, float bx, float by, float ar, f
       if (!endX) { endX = true; xs = xp; }
       if (alpha > HiAlphaTheshold) {
         // #ifdef GC9A01_DRIVER
-        #if (defined (GC9A01_DRIVER || defined (GC9D01_DRIVER))
+        #if defined (GC9A01_DRIVER || defined (GC9D01_DRIVER)
           drawPixel(xp, yp, fg_color);
         #else
           if (swin) { setWindow(xp, yp, x1, yp); swin = false; }
@@ -4574,7 +4574,7 @@ void TFT_eSPI::drawWedgeLine(float ax, float ay, float bx, float by, float ar, f
         bg = readPixel(xp, yp); swin = true;
       }
       // #ifdef GC9A01_DRIVER
-      #if (defined (GC9A01_DRIVER || defined (GC9D01_DRIVER))
+      #if defined (GC9A01_DRIVER || defined (GC9D01_DRIVER)
         uint16_t pcol = fastBlend((uint8_t)(alpha * PixelAlphaGain), fg_color, bg);
         drawPixel(xp, yp, pcol);
         swin = swin;
