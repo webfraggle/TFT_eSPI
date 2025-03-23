@@ -3600,7 +3600,7 @@ void TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color)
   y+=rowstart;
 #endif
 
-#if (defined (MULTI_TFT_SUPPORT) || defined (GC9A01_DRIVER) || defined (GC9D01_DRIVER)) && !defined (ILI9225_DRIVER)
+#if (defined (MULTI_TFT_SUPPORT) || defined (GC9A01_DRIVER)) && !defined (ILI9225_DRIVER)
   addr_row = 0xFFFF;
   addr_col = 0xFFFF;
 #endif
@@ -4560,8 +4560,8 @@ void TFT_eSPI::drawWedgeLine(float ax, float ay, float bx, float by, float ar, f
       // Track line boundary
       if (!endX) { endX = true; xs = xp; }
       if (alpha > HiAlphaTheshold) {
-        // #ifdef GC9A01_DRIVER
-        #if defined (GC9A01_DRIVER) || defined (GC9D01_DRIVER)
+        #ifdef GC9A01_DRIVER
+        // #if defined (GC9A01_DRIVER) || defined (GC9D01_DRIVER)
           drawPixel(xp, yp, fg_color);
         #else
           if (swin) { setWindow(xp, yp, x1, yp); swin = false; }
