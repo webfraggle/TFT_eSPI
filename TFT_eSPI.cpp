@@ -3600,6 +3600,7 @@ void TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color)
   y+=rowstart;
 #endif
 
+// #if (defined (MULTI_TFT_SUPPORT) || defined (GC9A01_DRIVER) || defined (GC9D01_DRIVER)) && !defined (ILI9225_DRIVER)
 #if (defined (MULTI_TFT_SUPPORT) || defined (GC9A01_DRIVER)) && !defined (ILI9225_DRIVER)
   addr_row = 0xFFFF;
   addr_col = 0xFFFF;
