@@ -885,6 +885,9 @@ void TFT_eSPI::setRotation(uint8_t m)
 #elif defined (ST77916_DRIVER)
     #include "TFT_Drivers/ST77916_Rotation.h"
 
+#elif defined (GC9D01N_DRIVER)
+    #include "TFT_Drivers/GC9D01N_Rotation.h"
+
 #endif
 
   delayMicroseconds(10);
