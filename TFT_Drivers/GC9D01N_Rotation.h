@@ -18,9 +18,11 @@ switch (rotation) {
 #endif    
     break;
   case 1: // Landscape (Portrait + 90)
-    writedata(TFT_MAD_MX | TFT_MAD_MV | 0x00);
+    writedata(0x00 | TFT_MAD_MX | TFT_MAD_MV);
     _width  = _init_height;
     _height = _init_width;
+    colstart = 1;
+      rowstart = 2;
 #ifdef CGRAM_OFFSET
     if (_init_width == 128)
     {
