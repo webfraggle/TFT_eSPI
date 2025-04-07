@@ -316,8 +316,8 @@
 // // #else
 // //     writedata(0x00 |  TFT_MAD_MX | TFT_MAD_MY);
 // // #endif
-//     writecommand(0x11);
-    // delay(200);
+    writecommand(0x11);
+    delay(200);
     writecommand(0x29);
     writecommand(0x2C);
 

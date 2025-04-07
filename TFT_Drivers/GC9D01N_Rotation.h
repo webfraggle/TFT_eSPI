@@ -2,7 +2,7 @@
 // This is the command sequence that rotates the GC9A01 driver coordinate frame
 
   rotation = m % 4;
-
+Serial.println(rotation);
   writecommand(TFT_MADCTL);
   switch (rotation) {
     case 0: // Portrait
@@ -26,8 +26,7 @@
       _height = _init_width;
       break;
   }
-  writecommand(0x11);
-  delay(200);
+
 
   /*
   
