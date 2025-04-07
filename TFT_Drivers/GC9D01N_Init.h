@@ -306,18 +306,18 @@
 // #define TFT_MAD_MV  0x20
 // #define TFT_MAD_ML  0x10
 
-    writecommand(0x36);
+//     writecommand(0x36);
 
-// //#if LANDSCAPE
-// //writedata(0x00 |  TFT_MAD_MX | TFT_MAD_MY);
+// // //#if LANDSCAPE
+// // //writedata(0x00 |  TFT_MAD_MX | TFT_MAD_MY);
 
-// #if (LANDSCAPE==2)||(PORTRAIT==2)
-    writedata(0x00);
-// #else
-//     writedata(0x00 |  TFT_MAD_MX | TFT_MAD_MY);
-// #endif
-    writecommand(0x11);
-    delay(200);
+// // #if (LANDSCAPE==2)||(PORTRAIT==2)
+//     writedata(0x00);
+// // #else
+// //     writedata(0x00 |  TFT_MAD_MX | TFT_MAD_MY);
+// // #endif
+//     writecommand(0x11);
+    // delay(200);
     writecommand(0x29);
     writecommand(0x2C);
 
